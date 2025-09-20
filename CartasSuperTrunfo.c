@@ -60,6 +60,7 @@ int main() {
 
     printf("Qual o número de pontos turísticos?\n");
     scanf("%d", &pontos2);
+
   // Área para exibição dos dados da cidade
     printf("Aqui estão as respostas das cartas:\n");
 
@@ -83,4 +84,4 @@ int main() {
 
 return 0;
 
-} 
+}
