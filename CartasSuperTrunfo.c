@@ -14,6 +14,7 @@ int main() {
     float densidade1, densidade2;
     float ppc1, ppc2;
     float superpoder1, superpoder2;
+    int resultadopopulacao, resultadoarea, resultadopib, resultadopontos, resultadodensidade, resultadoppc, resultadosuperpoder;
 
   // Área para entrada de dados
     printf("Vamos começar pela primeira carta!\n");
@@ -73,6 +74,15 @@ int main() {
     superpoder1 = (float)populacao1 + area1 + pib1 + pontos1 + ppc1 + (1.0f / densidade1);
     superpoder2 = (float)populacao2 + area2 + pib2 + pontos2 + ppc2 + (1.0f / densidade2);
 
+  // Área para cálculo de comparações:
+    resultadopopulacao = populacao1 > populacao2;
+    resultadoarea = area1 > area2;
+    resultadopib = pib1 > pib2;
+    resultadopontos = pontos1 > pontos2;
+    resultadodensidade = densidade1 < densidade2;
+    resultadoppc = ppc1 > ppc2;
+    resultadosuperpoder = superpoder1 > superpoder2;
+
   // Área para exibição dos dados da cidade
     printf("Aqui estão as respostas das cartas:\n");
 
@@ -103,13 +113,13 @@ int main() {
   // Área para comparações e resultados:
     printf("Comparação de Cartas e Resultado:\n");
 
-    printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
-    printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
-    printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
-    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontos1 > pontos2);
-    printf("Densidade Populacional: Carta 2 venceu (%d)\n", densidade1 < densidade2);
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", ppc1 > ppc2);
-    printf("Super Poder: Carta 1 venceu (%d)\n", superpoder1 > superpoder2);
+    printf("População: Carta 1 venceu (%d)\n", resultadopopulacao);
+    printf("Área: Carta 1 venceu (%d)\n", resultadoarea);
+    printf("PIB: Carta 1 venceu (%d)\n", resultadopib);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", resultadopontos);
+    printf("Densidade Populacional: Carta 2 venceu (%d)\n", resultadodensidade);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", resultadoppc);
+    printf("Super Poder: Carta 1 venceu (%d)\n", resultadosuperpoder);
 
     printf("Obrigado pela partida!\n");
 
